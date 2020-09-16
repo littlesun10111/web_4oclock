@@ -1,0 +1,132 @@
+@charset "UTF-8";
+/* CSS Document */
+#container {
+	margin-left: 80px;
+}
+#section_up {
+	width: 920px;
+	height: 110px;
+}
+#search {
+	width: 400px;
+	height: 30px;
+	padding: 50px 0px 30px;
+}
+/*搜尋框css*/
+#search form {
+	height: 30px;
+	position: relative;
+	width: 400px;
+	margin: 0 auto;
+}
+#search input {
+	height: 100%;
+	width: 350px;
+	padding: 0 2px 0 2px;
+	border: none;
+	border-bottom: 2px solid #000000;
+	outline: none;
+	background: transparent;
+	position: absolute;
+	top: 0;
+	left: 30px;
+	z-index: 1;
+}
+#search button {
+	background: #000000;
+	border: none;
+	height: 30px;
+	width: 30px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+}
+/*標籤設定*/
+#tag {
+	width: 360px;
+	height: 30px;
+	padding: 50px 0px 30px;
+}
+#tag .botton_tag{
+	width:100px;
+	height:30px;
+	margin-left: 10px;
+	position: relative;
+}
+#tag .botton_tag a{
+	text-decoration: none;
+	color:  #d7bfa5;
+	position: absolute;
+	top: 7px;
+	right: 20px;
+}
+#tag .botton_tag a:focus{
+	color:black;
+}
+#tag .botton_tag a:hover{
+	color:sandybrown;
+}
+#section_down {
+	width: 920px;
+	height: 960px;
+	padding: 30px 0px;
+}
+.product {
+	width: 920px;
+	height: 300px;
+	margin-bottom: 30px;
+	
+}
+/*編號設定*/
+.number {
+	width: 120px;
+	height: 300px;
+	position: relative;
+}
+.number iframe {
+	margin: auto;
+	position: absolute;
+	top: 115px;
+	left: 25px;
+}
+.number h3{
+	position:absolute;
+	top:141px;
+	left:54px;
+	z-index: 10;
+}
+.pics{
+	position: relative;
+}
+.pics .mask{
+	width: 350px;
+	height: 250px;
+	background-color: rgba(245,245,245,0.60);
+	display: none;
+	position: absolute;
+	top: 25px;
+	left: 25px;
+	transition: all 5s;
+	opacity: 0;
+}
+.pics .mask p{
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 250px;
+	text-align: center;
+}
+.pics img:hover~.mask{
+	display: block;
+	opacity: 1;
+}
+.text {
+	width: 320px;
+	height: 260px;
+	padding: 20px 40px;
+}
+#section_page {
+	width: 240px;
+	height: 60px;
+	padding: 20px 340px
+}

@@ -1,0 +1,44 @@
+@charset "UTF-8";
+/* CSS Document */
+#container {
+	margin: 50px 80px 100px 80px;
+}
+.left {
+	width: 120px;
+}
+.right {
+	width: 800px;
+}
+.staff_p{
+	width:800px;
+	height:180px;
+	
+	
+}
+.staff,.staff_f{
+	width:380px;
+	height:150px;}
+	
+.staff{
+	float: left;
+	
+}
+.staff_f{
+	float: right;
+}
+.staff_pic{
+	width:104px;
+	height:138px;
+	padding:8px 6px;
+	float: left;
+}
+.staff_text{
+	width: 260px;
+	height:120px;
+	padding-top: 30px;
+	float: right;
+}
+
+.fancybox-custom .fancybox-skin {
+			box-shadow: 0 0 50px #222;
+		}

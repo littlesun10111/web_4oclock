@@ -1,0 +1,119 @@
+@charset "UTF-8";
+/* CSS Document */
+#container {
+	margin-left: 80px;
+}
+#section_up {
+	width: 920px;
+	height: 80px;
+	margin-bottom: 30px;
+}
+#search {
+	width: 400px;
+	height: 30px;
+	padding: 50px 0px 0px;
+}
+/*搜尋框css*/
+#search form {
+	height: 30px;
+	position: relative;
+	width: 400px;
+	margin: 0 auto;
+}
+#search input {
+	height: 100%;
+	width: 350px;
+	padding: 0 2px 0 2px;
+	border: none;
+	border-bottom: 2px solid #000000;
+	outline: none;
+	background: transparent;
+	position: absolute;
+	top: 0;
+	left: 30px;
+	z-index: 1;
+}
+#search button {
+	background: #000000;
+	border: none;
+	height: 30px;
+	width: 30px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	/*滑鼠移到按鈕時滑鼠的圖示*/
+	cursor: pointer;
+}
+/*標籤設定*/
+#tag {
+	width: 360px;
+	height: 30px;
+	padding: 50px 0px 30px;
+}
+#tag .botton_tag {
+	width: 100px;
+	height: 30px;
+	margin-left: 10px;
+	position: relative;
+}
+#tag .botton_tag a {
+	text-decoration: none;
+	color: #d7bfa5;
+	position: absolute;
+	top: 7px;
+	right: 20px;
+}
+#tag .botton_tag a:focus {
+	color: black;
+}
+#tag .botton_tag a:hover {
+	color: sandybrown;
+}
+#section_down {
+	width: 920px;
+	height: 930px;
+}
+.pic_wrapper {
+	width: 920px;
+	height: 300px;
+	margin-bottom: 10px;
+}
+/*三個均分的排版*/
+.pic_link {
+	width: 300px;
+	height: 300px;
+	float: left;
+	flex: 1;
+	/*內部的位置參考*/
+	position: relative;
+}
+.pic_link+.pic_link/*給後面兩個設置間隔*/ {
+	margin-left: 10px;
+}
+/*滑鼠移到上面的變換*/
+.lid {
+	width: 250px;
+	height: 250px;
+	top: 25px;
+	left: 25px;
+	position: absolute;
+	/*透明度0*/
+	opacity: 0;
+	/*變換參數 時間*/
+	transition: all 1s;
+}
+.pic_link:hover .lid {
+	opacity: 1;
+}
+/*滑入父子層
+
+.big:hover .lid {display: block;}*/
+
+/*滑入兄弟層
+.big img:hover~.lid {display: block; }*/
+
+#nextpage {
+	width: 240px;
+	height: 60px;
+	padding: 20px 340px
+}

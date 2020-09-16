@@ -1,0 +1,373 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="keywords" content="web design, web practice, 4 o clock, student">
+<meta name="description" content="這是一個練習版的新一代活動網站">
+<meta name="author" content="u0281004@nkfust.edu.tw, lily Peng">
+<title>Untitled Document</title>
+<link href="css/css_reset .css" rel="stylesheet" type="text/css">
+<link href="css/basic.css" rel="stylesheet" type="text/css">
+<link href="css/layout_900up.css" rel="stylesheet" type="text/css">
+<link href="css/intro layout.css" rel="stylesheet" type="text/css">
+<!-- Add jQuery library -->
+	<script type="text/javascript" src="fancybox/lib/jquery-1.10.1.min.js"></script>
+
+	<!-- Add mousewheel plugin (this is optional) -->
+	<script type="text/javascript" src="fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+
+	<!-- Add fancyBox main JS and CSS files -->
+	<script type="text/javascript" src="fancybox/source/jquery.fancybox.js?v=2.1.5"></script>
+	<link rel="stylesheet" type="text/css" href="fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+
+	<!-- Add Button helper (this is optional) -->
+	<link rel="stylesheet" type="text/css" href="fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" />
+	<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+
+	<!-- Add Thumbnail helper (this is optional) -->
+	<link rel="stylesheet" type="text/css" href="fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" />
+	<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+	<!-- Add Media helper (this is optional) -->
+	<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+
+<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+			 *  Simple image gallery. Uses default settings
+			 */
+
+			$('.fancybox').fancybox();
+
+			/*
+			 *  Different effects
+			 */
+
+			// Change title type, overlay closing speed
+			$(".fancybox-effects-a").fancybox({
+				helpers: {
+					title : {
+						type : 'outside'
+					},
+					overlay : {
+						speedOut : 0
+					}
+				}
+			});
+
+			// Disable opening and closing animations, change title type
+			$(".fancybox-effects-b").fancybox({
+				openEffect  : 'none',
+				closeEffect	: 'none',
+
+				helpers : {
+					title : {
+						type : 'over'
+					}
+				}
+			});
+
+			// Set custom style, close if clicked, change title type and overlay color
+			$(".fancybox-effects-c").fancybox({
+				wrapCSS    : 'fancybox-custom',
+				closeClick : true,
+
+				openEffect : 'none',
+
+				helpers : {
+					title : {
+						type : 'inside'
+					},
+					overlay : {
+						css : {
+							'background' : 'rgba(238,238,238,0.85)'
+						}
+					}
+				}
+			});
+
+			// Remove padding, set opening and closing animations, close if clicked and disable overlay
+			$(".fancybox-effects-d").fancybox({
+				padding: 0,
+
+				openEffect : 'elastic',
+				openSpeed  : 150,
+
+				closeEffect : 'elastic',
+				closeSpeed  : 150,
+
+				closeClick : true,
+
+				helpers : {
+					overlay : null
+				}
+			});
+			/*
+			 *  Button helper. Disable animations, hide close button, change title type and content
+			 */
+
+			$('.fancybox-buttons').fancybox({
+				openEffect  : 'none',
+				closeEffect : 'none',
+
+				prevEffect : 'none',
+				nextEffect : 'none',
+
+				closeBtn  : false,
+
+				helpers : {
+					title : {
+						type : 'inside'
+					},
+					buttons	: {}
+				},
+
+				afterLoad : function() {
+					this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
+				}
+			});
+
+
+			/*
+			 *  Thumbnail helper. Disable animations, hide close button, arrows and slide to next gallery item if clicked
+			 */
+
+			$('.fancybox-thumbs').fancybox({
+				prevEffect : 'none',
+				nextEffect : 'none',
+
+				closeBtn  : false,
+				arrows    : false,
+				nextClick : true,
+
+				helpers : {
+					thumbs : {
+						width  : 50,
+						height : 50
+					}
+				}
+			});
+
+			/*
+			 *  Media helper. Group items, disable animations, hide arrows, enable media and button helpers.
+			*/
+			$('.fancybox-media')
+				.attr('rel', 'media-gallery')
+				.fancybox({
+					openEffect : 'none',
+					closeEffect : 'none',
+					prevEffect : 'none',
+					nextEffect : 'none',
+
+					arrows : false,
+					helpers : {
+						media : {},
+						buttons : {}
+					}
+				});
+
+			/*
+			 *  Open manually
+			 */
+
+			$("#fancybox-manual-a").click(function() {
+				$.fancybox.open('1_b.jpg');
+			});
+
+			$("#fancybox-manual-b").click(function() {
+				$.fancybox.open({
+					href : 'iframe.html',
+					type : 'iframe',
+					padding : 5
+				});
+			});
+
+			$("#fancybox-manual-c").click(function() {
+				$.fancybox.open([
+					{
+						href : '1_b.jpg',
+						title : 'My title'
+					}, {
+						href : '2_b.jpg',
+						title : '2nd title'
+					}, {
+						href : '3_b.jpg'
+					}
+				], {
+					helpers : {
+						thumbs : {
+							width: 75,
+							height: 50
+						}
+					}
+				});
+			});
+
+
+		});
+	</script>
+</head>
+
+<body>
+<div id="wrapper" class="fontfamily_all">
+  <div id="header" class="bg_black">
+    <div id="logo" class="float_left"><a href="layout_home.html"><img src="images/logo.png" width="180" height="100" alt=""/></a></div>
+    <div id="nav" class="float_left">
+      <ul>
+        <li><a href="intro layout.html">系所介紹</a></li>
+      </ul>
+      <ul>
+        <li><a href="poster.html">主視覺</a></li>
+      </ul>
+      <ul>
+        <li><a href="page text layout.html">展覽資訊</a></li>
+      </ul>
+      <ul>
+        <li><a href="pic three layout.html">學生作品</a></li>
+      </ul>
+      <ul>
+        <li><a href="links.html">好站連結</a></li>
+      </ul>
+    </div>
+  </div>
+  <div id="container" class="clear fontfamily_all">
+    <div class="intro">
+      <div class="left float_left">
+        <h2>系所介紹</h2>
+      </div>
+      <div class="right float_left"><img src="images/name_pic.png" width="800" height="110" alt=""/></div>
+    </div>
+    <div class="intro clear">
+      <div class="left float_left">
+        <h3>成立宗旨</h3>
+      </div>
+      <div class="right float_left">
+        <p>「創新設計工程系」之設立，正是本著「創新產品＋工程技術」之理念，培養跨領域實務能力的創新設計人才外，同時配合本校「創新、創業教育」及「創新、創業育成」二大發展主軸，透過各領域相關專長的教師與設備，以提昇創新、創業的商品化研發能量。此外，為配合創意設計產業的發展趨勢，本系也將建立設計方面的地區優勢，包括提供優質的設計學習環境，以吸引鄰近地區學生的就學和業界員工的進修；所培育出設計人才，將提供區域產業的人力需求與提升廠商的競爭力。</p>
+        &nbsp;
+        <p>本系的發展特色如下:</p>
+        &nbsp;
+        <p>(1)紮實的設計基礎養成教育：經由課程規劃教育，理解設計中的各種美的形式原理、設計典範，以提高美學鑑賞能力與設計學養，並透過模型實作，感受造型物的創作、變化之演繹關係、手繪練習與電腦輔助設計繪圖，進而養成產品的敏銳觀察能力與設計創作力。</p>
+        <p>(2)產業需求接軌的商品化設計能力培育：本系的專任師資建置皆以具有豐厚優秀的產業設計實務經驗教師為主，以建立務實設計學風，擴大與產業界的設計合作關係，以建立學生商品化設計能力，成為產業界炙手可熱的務實產研人才。</p>
+        <p>(3)創新設計能力培育：課程包括創新設計的特色，重視個人創造力的啟發與專利能力，以培養具有競爭力之創新設計及專利素養兼備的設計人才。</p>
+        <p>(4)國際觀及外語能力培育：課程內容規劃導入外語學習環境，藉由設計英文課程、國際交換學生、外籍教師授課、參與國際設計營、國際設計競賽等課程與活動，破除技職設計人才予人外語能力不佳的刻板印象，培育具備國際交流能力的設計人才。</p>
+        &nbsp; </div>
+    </div>
+    <div class="intro clear">
+      <div class="left float_left">
+        <h3>重點特色</h3>
+      </div>
+      <div class="right float_left">
+        <p>依據設計產業的發展趨勢、地區產業的脈動和未來招生的挑戰等，本系的發展重點將朝向符合產業需求和學生專業能力培養兩大方向。本系將藉由培育新一代技術應用與設計整合之人才，以提昇學生的就業與創業力與產業競爭力。</p>
+        &nbsp;
+        <p>發展重點包括：</p>
+        &nbsp;
+        <p>(1)培育具有「紮實設計基礎」、「創新商品化設計」、「國際化前瞻設計」等能力設計人才。</p>
+        <p>(2)充實教學設施、提升教學、研究和設計人才養成的成效。</p>
+        <p>(3)提供地區產業有關產品設計的諮詢服務和人員的進修與推廣。</p>
+        <p>(4)結合產業界共同研發，提高產業服務與技術的交流，推動產學計畫，創造產學雙贏。</p>
+        &nbsp; </div>
+    </div>
+    <div class="intro clear">
+      <div class="left float_left">
+        <h3>系所成員</h3>
+      </div>
+      <div class="right float_left">
+        <div class="staff_p">
+          <div class="staff">
+            <div class="staff_pic "><a class="fancybox" href="images/fancy_image/祥唐_IMG_7592.jpg" data-fancybox-group="gallery" title="張祥唐"><img src="images/page2-pic0.png" alt="" /></a></div>
+            <div class="staff_text">
+              <p>張祥唐 副教授</p>
+              <p>信箱：htchang@nkfust.edu.tw</p>
+              <p>電話：07-6011000 ext：2297</p>
+            </div>
+          </div>
+          <div class="staff_f">
+            <div class="staff_pic"><a class="fancybox" href="images/fancy_image/湯姆_IMG_7460.jpg" data-fancybox-group="gallery" title="蔡宏政"><img src="images/page2-pic1.png" alt="" /></a></div>
+            <div class="staff_text">
+              <p>蔡宏政 副教授</p>
+              <p>信箱：tomtsai@nkfust.edu.tw</p>
+              <p>電話：07-6011000 ext：2296,2275</p>
+            </div>
+          </div>
+        </div>
+        <div class="staff_p">
+          <div class="staff">
+            <div class="staff_pic"><a class="fancybox" href="images/fancy_image/宋老_MG_8874.jpg" data-fancybox-group="gallery" title="宋毅仁"><img src="images/page2-pic2.png" alt="" /></a></div>
+            <div class="staff_text">
+              <p>宋毅仁 助理教授</p>
+              <p>信箱：jourdan@nkfust.edu.tw</p>
+              <p>電話：07-6011000 ext：7602</p>
+            </div>
+          </div>
+          <div class="staff_f">
+            <div class="staff_pic"><a class="fancybox" href="images/fancy_image/阿龍_IMG_7445.jpg" data-fancybox-group="gallery" title="林龍吟"><img src="images/page2-pic3.png" alt="" /></a></div>
+            <div class="staff_text">
+              <p>林龍吟 助理教授</p>
+              <p>信箱：a-long@nkfust.edu.tw</p>
+              <p>電話：07-6011000 ext：7603</p>
+            </div>
+          </div>
+        </div>
+        <div class="staff_p">
+          <div class="staff">
+            <div class="staff_pic"><a class="fancybox" href="images/fancy_image/阿東_IMG_7462.jpg" data-fancybox-group="gallery" title="陳俊東"><img src="images/page2-pic4.png" alt="" /></a></div>
+            <div class="staff_text">
+              <p>陳俊東 助理教授</p>
+              <p>信箱：upform@nkfust.edu.tw</p>
+              <p>電話：07-6011000 ext：7604</p>
+            </div>
+          </div>
+          <div class="staff_f">
+            <div class="staff_pic"><a class="fancybox" href="images/fancy_image/葉老_MG_8868.jpg" data-fancybox-group="gallery" title="葉恒志"><img src="images/page2-pic5.png" alt="" /></a></div>
+            <div class="staff_text">
+              <p>葉恒志 助理教授</p>
+              <p>信箱：henryeh@nkfust.edu.tw</p>
+              <p>電話：07-6011000 ext：2705</p>
+            </div>
+          </div>
+        </div>
+        <div class="staff_p">
+          <div class="staff">
+            <div class="staff_pic"><a class="fancybox" href="images/fancy_image/彩玲_MG_0759.jpg" data-fancybox-group="gallery" title="楊彩玲"><img src="images/page2-pic6.png" alt="" /></a></div>
+            <div class="staff_text">
+              <p>楊彩玲 助理教授</p>
+              <p>信箱：philina@nkfust.edu.tw</p>
+              <p>電話：07-6011000 ext：7619</p>
+            </div>
+          </div>
+          <div class="staff_f">
+            <div class="staff_pic"><a class="fancybox" href="images/fancy_image/龔老師_IMG_7573.jpg" data-fancybox-group="gallery" title="龔蒂菀"><img src="images/page2-pic7.png" alt="" /></a></div>
+            <div class="staff_text">
+              <p>龔蒂菀 助理教授</p>
+              <p>信箱：kung@nkfust.edu.tw</p>
+              <p>電話：07-6011000 ext：2706;8100</p>
+            </div>
+          </div>
+        </div>
+        <div class="staff_p">
+          <div class="staff">
+            <div class="staff_pic"><a class="fancybox" href="images/fancy_image/容君_IMG_7597.jpg" data-fancybox-group="gallery" title="劉容君"><img src="images/page2-pic8.png" alt="" /></a></div>
+            <div class="staff_text">
+              <p>劉容君 秘書</p>
+              <p>信箱：evaliu@nkfust.edu.tw</p>
+              <p>電話：07-6011000 ext：2702</p>
+            </div>
+          </div>
+          <div class="staff_f">
+            <div class="staff_pic"><a class="fancybox" href="images/fancy_image/佳玲_IMG_7614.jpg" data-fancybox-group="gallery" title="施佳伶"><img src="images/page2-pic9.png" alt="" /></a></div>
+            <div class="staff_text">
+              <p>施佳伶 業務助理</p>
+              <p>信箱：cls@nkfust.edu.tw</p>
+              <p>電話：07-6011000 ext：2701</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="footer" class="clear bg_black fontsize_14 fontfamily_all textcenter whitefont">
+    <p>copyright 2017  4o'clock</p>
+  </div>
+</div>
+</body>
+</html>

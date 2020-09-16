@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* CSS Document */
+#wrapper {
+	width: 1080px;
+	height: 900px;
+	margin:0px auto;
+}
+#header {
+	width: 1080px;
+	height: 100px;
+}
+#logo {
+	width: 180px;
+	height: 100px;
+}
+#nav {
+	width: 550px;
+	height: 20px;
+	padding: 60px 0px 20px 350px;
+}
+#content {
+	width: 1080px;
+	height: 750px;
+}
+#footer {
+	width: 1080px;
+	height: 20px;
+	padding: 15px 0px;
+}
+/*nav設定*/
+ul{
+	list-style: none;
+	
+}
+li{
+	float: left;
+	margin-right: 20px;
+}
+ul li a{
+	font-size: 18px;
+	text-decoration: none;
+	color: #FFFFFF;
+	letter-spacing: 3px;
+	font-family:"微軟正黑體";
+}
+ul li a:hover{
+	font-size: 20px;
+	text-decoration: none;
+	color: #d7bfa5;
+}

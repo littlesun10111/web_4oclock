@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="keywords" content="web design, web practice, 4 o clock, student">
+<meta name="description" content="這是一個練習版的新一代活動網站">
+<meta name="author" content="u0281004@nkfust.edu.tw, lily Peng">
+<title>Untitled Document</title>
+<link href="css/css_reset .css" rel="stylesheet" type="text/css">
+<link href="css/basic.css" rel="stylesheet" type="text/css">
+<link href="css/layout_900up.css" rel="stylesheet" type="text/css">
+<link href="css/link.css" rel="stylesheet" type="text/css">
+<link href="css/pagination.css" rel="stylesheet" type="text/css">
+<link href="css/page_section.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div id="wrapper" class="fontfamily_all">
+  <div id="header" class="bg_black">
+    <div id="logo" class="float_left"><a href="layout_home.html"><img src="images/logo.png" width="180" height="100" alt=""/></a></div>
+    <div id="nav" class="float_left">
+      <ul>
+        <li><a href="intro layout.html">系所介紹</a></li>
+      </ul>
+      <ul>
+        <li><a href="poster.html">主視覺</a></li>
+      </ul>
+      <ul>
+        <li><a href="page text layout.html">展覽資訊</a></li>
+      </ul>
+      <ul>
+        <li><a href="pic three layout.html">學生作品</a></li>
+      </ul>
+      <ul>
+        <li><a href="links.html">好站連結</a></li>
+      </ul>
+    </div>
+  </div>
+  <div id="container" class="clear fontfamily_all">
+    <div id="section_up" class="clear">
+      <h2 class="fontsize_24 float_left">好站連結</h2>
+      <div id="search" class="float_left">
+        <form class="float_left">
+          <botton type="submit">
+            <iframe src="images/magnifying-glass.svg" frameborder="0" width="30px" height="30px"></iframe>
+          </botton>
+          <input type="text" placeholder="請輸入搜尋文字">
+        </form>
+      </div>
+      <div id="tag" class="float_right">
+        <div class="botton_tag float_right">
+          <botton type="submit" name="tag" formtarget="_blank"><img src="images/tag.svg" alt="標籤"><a href="#">贊助廠商</a></botton>
+        </div>
+        <div class="botton_tag float_right">
+          <botton type="submit" name="tag" formtarget="_blank"><img src="images/tag.svg" alt="標籤"><a href="#">學校連結</a></botton>
+        </div>
+        <div class="botton_tag float_right">
+          <botton type="submit" name="tag" formtarget="_blank"><img src="images/tag.svg" alt="標籤"><a href="#">友校連結</a></botton>
+        </div>
+      </div>
+    </div>
+    <div id="section_down">
+      <div class="pic_wrapper">
+        <div class="pic_link"> <img src="images/bg-l.png" width="300" height="300" alt=""/>
+          <div class="lid"> <a href="#"><img src="images/page3_pic-hover_1.png" width="250" height="250" alt=""/></a> </div>
+        </div>
+        <div class="pic_link"><img src="images/bg-m.png" width="300" height="300" alt=""/>
+          <div class="lid"><a href="#"> <img src="images/page3_pic-hover_05.png" width="250" height="250" alt=""/></a> </div>
+        </div>
+        <div class="pic_link"><img src="images/bg-r.png" width="300" height="300" alt=""/>
+          <div class="lid"><a href="#l"> <img src="images/page3_pic-hover_07.png" width="250" height="250" alt=""/></a> </div>
+        </div>
+      </div>
+      <div class="pic_wrapper">
+        <div class="pic_link"> <img src="images/bg-l.png" width="300" height="300" alt=""/>
+          <div class="lid"><a href="#l"> <img src="images/page3_pic-hover_19.png" width="250" height="250" alt=""/></a> </div>
+        </div>
+        <div class="pic_link"><img src="images/bg-m.png" width="300" height="300" alt=""/>
+          <div class="lid"> <a href="#l"><img src="images/page3_pic-hover_18.png" width="250" height="250" alt=""/></a> </div>
+        </div>
+        <div class="pic_link"><img src="images/bg-r.png" width="300" height="300" alt=""/>
+          <div class="lid"> <a href="#l"><img src="images/page3_pic-hover_17.png" width="250" height="250" alt=""/></a> </div>
+        </div>
+      </div>
+      <div class="pic_wrapper">
+        <div class="pic_link"> <img src="images/bg-l.png" width="300" height="300" alt=""/>
+          <div class="lid"><a href="#l"> <img src="images/page3_pic-hover_13-05.png" width="250" height="250" alt=""/> </a></div>
+        </div>
+        <div class="pic_link"><img src="images/bg-m.png" width="300" height="300" alt=""/>
+          <div class="lid"><a href="#l"> <img src="images/page3_pic-hover_13.png" width="250" height="250" alt=""/></a> </div>
+        </div>
+        <div class="pic_link"><img src="images/bg-r.png" width="300" height="300" alt=""/>
+          <div class="lid"> <a href="#l"><img src="images/page3_pic-hover_14.png" width="250" height="250" alt=""/> </a></div>
+        </div>
+      </div>
+    </div>
+    <div id="nextpage">
+      <section> 
+        <!--<div class="data-container"></div>-->
+        <div id="pagination-demo1"></div>
+      </section>
+    </div>
+  </div>
+  <div id="footer" class="clear bg_black fontsize_14 fontfamily_all textcenter whitefont">
+    <p>copyright 2017  4o'clock</p>
+  </div>
+</div>
+<script src="http://libs.useso.com/js/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
+	<script src="js/pagination.js"></script>
+	<script>
+	    $(function(){
+
+	        function createDemo(name){
+	            var container = $('#pagination-' + name);
+	            var sources = function(){
+	                var result = [];
+
+	                for(var i = 1; i < 50; i++){
+	                    result.push(i);
+	                }
+
+	                return result;
+	            }();
+
+	            var options = {
+	                dataSource: sources,
+	                className: 'paginationjs-theme-blue',
+	                callback: function(response, pagination){
+	                    window.console && console.log(response, pagination);
+
+	                    var dataHtml = '<ul>';
+
+	                    $.each(response, function(index, item){
+	                        dataHtml += '<li>'+ item +'</li>';
+	                    });
+
+	                    dataHtml += '</ul>';
+
+	                    container.prev().html(dataHtml);
+	                }
+	            };
+
+	            //$.pagination(container, options);
+
+	            container.addHook('beforeInit', function(){
+	                window.console && console.log('beforeInit...');
+	            });
+	            container.pagination(options);
+
+	            container.addHook('beforePageOnClick', function(){
+	                window.console && console.log('beforePageOnClick...');
+	                //return false
+	            });
+
+	            return container;
+	        }
+
+	        createDemo('demo1');
+
+	    });
+	</script>	
+</body>
+</html>

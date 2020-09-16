@@ -1,0 +1,38 @@
+@charset "UTF-8";
+/* CSS Document */
+#section_l {
+	width: 130px;
+	padding: 0px 0px 0px 70px;
+}
+#section_r {
+	width: 800px;
+	padding: 0px 80px 0px 0px;
+}
+#sister {
+	width: 800px;
+	display: flex;
+}
+.triple {
+	width: 260px;
+	height: 240px;
+	float: left;
+	flex: 1;
+}
+.triple+.triple/*給後面兩個設置間隔*/ {
+	margin-left: 10px;
+}
+.title {
+	width: 260px;
+	height: 30px;
+	background-color: #d7bfa5;
+}
+.info {
+	width: 240px;
+	height: 190px;
+	padding: 10px;
+}
+#lasttext{
+	width:800px;
+	height: 160px;
+	padding:30px 0px;
+}
